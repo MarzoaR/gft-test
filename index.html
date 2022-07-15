@@ -1,0 +1,179 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head></head>
+    <body>
+        <div id="output"></div>
+
+        <script type="text/javascript">
+
+            var xslString = `
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="html" encoding="iso-8859-1"/>
+    <xsl:variable name="destino_formulario" select="ARQUITECTURA/DESTINO_FORMULARIO"/>
+    <xsl:variable name="idpeticionpesada" select="ARQUITECTURA/IDPETICIONPESADA"/>
+
+    <xsl:template match="/">
+        <html>
+        <head>
+            <title>Acuse de Recibo Remesas de Compensación</title>
+            <link rel="stylesheet" href="styles.css"/>
+            
+            <xsl:if test="normalize-space($idpeticionpesada)!='null' and normalize-space($idpeticionpesada)!=''">
+                <div style="position:absolute; top:0px; left:0px;">
+                    <object ID="PlugIn" WIDTH="1" HEIGHT="1" HSPACE="1" VSPACE="1" CLASSID="CLSID:E3C2C239-F164-4808-BB48-FC77AFD35E48">
+                        <param name="IdComm" value="{$idpeticionpesada}"></param>
+                    </object>
+                </div>		
+            </xsl:if>
+
+           
+        </head>
+        <body>
+            <div class="DivPagina">
+                <div class="DivTituloVentana">
+                    <label class="tituloVentanaIzq">
+                        Acuse de recibo remesas de compensación
+                    </label>        
+                </div>
+
+                <div class="DivContenedorVentana">
+                    <table border="0" cellspacing="2" cellpadding="2" class="TablaContenidoCaja" width="100%">
+                        <tr>
+                            <td style="padding-bottom: 0px">
+                                <label class="EtiquetaAutoescalable">											  
+                                    Tipo ingreso<br/> 
+                                        <select class="CampoObligatorio"  id="LST_TIPOINGRESO">
+                                            <option value="0"></option>
+                                            <option value="1">Cheques</option>
+                                            <option value="2">Ingreso Nomina</option>
+                                            <option value="3">Cheques Carburante</option>
+                                            <option value="4">Cheques Viajes</option>
+                                            <option value="5">Cheques Carburante CAMPSARED</option>
+                                            <option value="6">Gasóleo Bonificado</option>
+                                            <option value="8">Ingreso Campaña Libretón</option>
+                                    </select>
+                                </label>
+                                <label class="EtiquetaAutoescalable">
+                                    Tipo abono<br/>
+                                    <select class="CampoSalida" 
+                                        id="LST_TIPOABONO" 
+                                        name="LST_TIPOABONO">
+                                            <option value="0"></option>
+                                            <option value="1">Unitario</option>
+                                            <option value="2">Total Remesa</option>
+                                    </select>
+                                </label>
+                                <label class="EtiquetaAutoescalable">
+                                    Moneda<br/>
+                                    <select class="CampoSalida" 
+                                        id="LST_MONEDA" 
+                                        name="LST_MONEDA">
+                                            <option value="0"></option>
+                                            <option value="1">Pesetas</option>
+                                            <option value="2">Euros</option>
+                                    </select>
+                                </label>
+                                <label class="EtiquetaAutoescalable">
+                                    Importe remesa<br/>
+                                    <input type="text" 
+                                        size="14" 
+                                        maxlength="12" 
+                                        class="CampoObligatorioImporte" 
+                                        id="IMP_REMES" name="IMP_REMES"/>
+                                </label>
+                            
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    <div class="DivBotonera">
+	    		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+					<td class="alinearDer">
+						<hr class="separadorBotonera"></hr>
+						<input type="button" name="btAceptar" id="btAceptar" value="Aceptar" class="Boton BotonMargenDer" tabindex="15" onkeypress="" onclick="aceptar();" onkeydown="return tabularAdelanteOAtras(this)"/>
+						<input type="button" name="btCancelar" id="btCancelar" value="Cancelar" class="Boton BotonMargenDer" tabindex="16" onkeypress="" onclick="cancelar();" onkeydown="return tabularAdelanteOAtras(this)"/>
+					</td>
+					</tr>
+					</table>
+	    </div>
+                </div>
+
+                
+                
+            </div>
+        </body>
+        </html>  
+    </xsl:template>
+</xsl:stylesheet>  
+`;
+
+
+             if( window.DOMParser ){
+                // var xmlString = '';
+                // var text = fetchTemplateSomehowAsText("./prueba.html");
+                fetch("prueba.html").then(res => {
+                    console.log(res);
+                });
+
+
+                // var xhr = new XMLHttpRequest();
+
+                // xhr.onload = function () {
+                //     console.log(this.response);
+                // };
+
+                // xhr.open('GET', 'prueba.html', true);
+                // xhr.send();
+                // var domParser = new DOMParser();
+                // var xslDoc = domParser.parseFromString(xslString, "application/xml");
+                // var xmlDoc = domParser.parseFromString(xmlString, "application/xml");
+                // var xslDoc = domParser.parseFromString(text, "text/html");
+                // var xslDoc = domParser.parseFromString(`
+                //     <html>
+                //         <head>
+                //             <title>Prueba</title>
+                //         </head>
+
+                //         <body>
+                //             <h1>Esto es un título</h1>
+                //             <p>Y esto un párrafo</p>
+                //         </body>
+                //     </html>
+                // `, "text/html");
+                // console.dir(xslDoc);
+                // var xmlDoc = domParser.parseFromString(xmlString, "application/xml");
+        
+                // var xslProc = new XSLTProcessor();
+                // xslProc.importStylesheet(xslDoc);
+        
+                // var result = xslProc.transformToFragment(xmlDoc, document);
+                // var resultDoc = xslProc.transformToDocument(xmlDoc, document); //xslProc.transformToDocument
+                // document.getElementById("output").appendChild(result);
+                // document.body = xslDoc.body;
+                // //   console.log(result);
+
+            }else{
+                // Internet Explorer
+                xml = new ActiveXObject("Microsoft.XMLDOM");
+                xml.loadXML(xslString);
+                console.log("entrada en el else: ");
+            }
+
+
+            // var xml = new ActiveXObject("Microsoft.XMLDOM"); 
+            // var xslt = new ActiveXObject("MSXML2.FreeThreadedDOMDocument");
+            // xml.load("./kpuhve00010.xml");
+            // xslt.load("./kpuhve00010_es.xsl");
+
+            // var processor   = new ActiveXObject("Msxml2.XSLTemplate");
+            // processor.stylesheet = xslt;
+
+            // var objXSLTProc = processor.createProcessor();
+            // objXSLTProc.input = xml;
+            // objXSLTProc.transform();
+            // var output  = objXSLTProc.output;
+
+
+        </script>
+    </body>
+</html>

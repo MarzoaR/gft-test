@@ -1,0 +1,188 @@
+﻿<N C="atae.thin.apli.AtaeSvFlujoInterno">
+<ContextoEntradaVentana A="S">
+	<I T="S">LST_TIPOINGRESO</I>
+	<I T="S">LST_TIPOABONO</I>
+	<I T="S">LST_MONEDA</I>
+	<I T="S">IMP_REMES</I>
+	<I T="S">XTI_TIPINGR</I>
+	<I T="S">DES_TIPINGR</I>
+	<I T="S">COD_BCOABON</I>
+	<I T="S">COD_BCOTERMI</I>
+	<I T="S">COD_OFITERMI</I>
+	<I T="S">COD_OFIABON</I>
+	<I T="S">COD_DCABON</I>
+	<I T="S">COD_CTAABON</I>
+	<I T="S">DES_OBSERV</I>
+	<I T="S">XTI_IMPDOCUM</I>
+	<I T="S">COD_REFCLIEN</I>
+	<I T="S">FEC_ENTREGA</I>
+	<I T="S">COD_TARIFA</I>
+	<I T="S">COD_DIISOALF</I>
+	<I T="S">XTI_TIPABONO</I>
+	<I T="S">ESTADO_TITULAR</I>
+	<I T="S">ERROR_FECHA</I>
+	<I T="S">ERROR_CUENTA</I>
+	<I T="S">ERROR_REFE</I>
+	<I T="S">ERROR_BANCO</I>
+	<I T="S">COD_LUPA</I>
+	<I T="S">XSN_CONSULTAOK</I>
+	<I T="S">COD_BCO_INTERNO</I>
+	<I T="S">COD_OFI_INTERNO</I>
+	<I T="S">COD_CONTRAP_INTERNO</I>
+	<I T="S">COD_FOLIO_INTERNO</I>
+	<I T="S">COD_CTAEXTNO_S</I>
+	<I T="S">CUBICO</I>
+</ContextoEntradaVentana>
+
+<Controles A="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">XTI_TIPINGR</Contexto>
+		<Nombre T="S">XTI_TIPINGR</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		  <Contexto T="S">DES_TIPINGR</Contexto>
+		  <Nombre T="S">DES_TIPINGR</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">XTI_TIPABONO</Contexto>
+		<Nombre T="S">hXTI_TIPABONO</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">IMP_REMES</Contexto>
+		<Nombre T="S">hIMP_REMES</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">XTI_IMPDOCUM</Contexto>
+		<Nombre T="S">hXTI_IMPDOCUM</Nombre>
+	</I>			
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_REFCLIEN</Contexto>
+		<Nombre T="S">hCOD_REFCLIEN</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">FEC_ENTREGA</Contexto>
+		<Nombre T="S">hFEC_ENTREGA</Nombre>
+	</I>	
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_DIISOALF</Contexto>
+		<Nombre T="S">hCOD_DIISOALF</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_BCOABON</Contexto>
+		<Nombre T="S">hCOD_BCOABON</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_OFIABON</Contexto>
+		<Nombre T="S">hCOD_OFIABON</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_DCABON</Contexto>
+		<Nombre T="S">hCOD_DCABON</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_CTAABON</Contexto>
+		<Nombre T="S">hCOD_CTAABON</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">DES_OBSERV</Contexto>
+		<Nombre T="S">hDES_OBSERV</Nombre>
+	</I>	
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		  <Contexto T="S">ESTADO_TITULAR</Contexto>
+		  <Nombre T="S">hestado_titular</Nombre>
+		</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">ERROR_FECHA</Contexto>
+		<Nombre T="S">hERROR_FECHA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">ERROR_CUENTA</Contexto>
+		<Nombre T="S">hERROR_CUENTA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">ERROR_REFE</Contexto>
+		<Nombre T="S">hERROR_REFE</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">ERROR_BANCO</Contexto>
+		<Nombre T="S">hERROR_BANCO</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">IMP_LINEA_EUROS</Contexto>
+		<Nombre T="S">HD_IMP_LINEA_EUROS</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">IMP_EUROS</Contexto>
+		<Nombre T="S">HD_IMP_EUROS</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_LUPA</Contexto>
+		<Nombre T="S">COD_LUPA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">IMP_REMES_FORM</Contexto>
+		<Nombre T="S">HD_IMP_REMES_FORM</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">CUENTAABON</Contexto>
+		<Nombre T="S">HD_CUENTAABON</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		  <Contexto T="S">XSN_CONSULTAOK</Contexto>
+		  <Nombre T="S">XSN_CONSULTAOK</Nombre>
+		</I>
+
+	<!-- Modificacion 58156-->
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">DES_MONEDA</Contexto>
+	  <Nombre T="S">Odes_moneda</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">IMP_DOCUM_FORM</Contexto>
+	  <Nombre T="S">Oimp_docum_form</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">COD_BCO_INTERNO</Contexto>
+	  <Nombre T="S">COD_BCO_INTERNO</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">COD_OFI_INTERNO</Contexto>
+	  <Nombre T="S">COD_OFI_INTERNO</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">COD_CONTRAP_INTERNO</Contexto>
+	  <Nombre T="S">COD_CONTRAP_INTERNO</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">COD_FOLIO_INTERNO</Contexto>
+	  <Nombre T="S">COD_FOLIO_INTERNO</Nombre>
+	</I>
+	
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+	  <Contexto T="S">COD_CTAEXTNO_S</Contexto>
+	  <Nombre T="S">COD_CTAEXTNO_S</Nombre>
+	</I>
+		<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		  <Contexto T="S">CUBICO</Contexto>
+		  <Nombre T="S">CUBICO</Nombre>
+		</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_BCO_SALIDA</Contexto>
+		<Nombre T="S">hCOD_BCO_SALIDA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_OFI_SALIDA</Contexto>
+		<Nombre T="S">hCOD_OFI_SALIDA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_DC_SALIDA</Contexto>
+		<Nombre T="S">hCOD_DC_SALIDA</Nombre>
+	</I>
+	<I C="atae.thin.pres.AtaeSvPropiedadesControlFlujoInterno">
+		<Contexto T="S">COD_CTA_SALIDA</Contexto>
+		<Nombre T="S">hCOD_CTA_SALIDA</Nombre>
+	</I>
+
+</Controles>
+<NombreVentana T="S">KPUHVE00010</NombreVentana>
+</N>
